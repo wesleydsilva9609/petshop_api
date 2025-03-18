@@ -21,4 +21,9 @@ public class TutorService {
         tutorRepository.save(tutor);
         return ResponseEntity.created(uri).body(new DadosDetalhamentoTutor(tutor));
     }
+
+    public ResponseEntity buscarPorId(Long id) {
+        var tutor = tutorRepository.getReferenceById(id);
+        return ResponseEntity.ok(new DadosDetalhamentoTutor(tutor));
+    }
 }
