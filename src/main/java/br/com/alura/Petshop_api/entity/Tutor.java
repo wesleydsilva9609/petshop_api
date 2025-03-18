@@ -1,5 +1,6 @@
 package br.com.alura.Petshop_api.entity;
 
+import br.com.alura.Petshop_api.controller.DadosCadastroTutor;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,6 +21,13 @@ public class Tutor {
     private String telefone;
     private String cpf;
     private String email;
-    @OneToMany
-    private List<Pet> pet;
+
+
+    public Tutor(DadosCadastroTutor dadosCadastroTutor) {
+        this.id = dadosCadastroTutor.id();
+        this.nome = dadosCadastroTutor.nome();
+        this.telefone = dadosCadastroTutor.telefone();
+        this.cpf = dadosCadastroTutor.cpf();
+        this.email = dadosCadastroTutor.email();
+    }
 }

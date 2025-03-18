@@ -20,8 +20,6 @@ public class Pet {
     private String especie;
     private String rga;
     private String cor;
-    @ManyToOne
-    private Tutor tutor;
 
 
     public Pet(DadosCadastroPet dadosCadastroPet) {
