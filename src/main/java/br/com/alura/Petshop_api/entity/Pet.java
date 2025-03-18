@@ -8,7 +8,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "Pet")
+@Table(name = "Pet", uniqueConstraints = {
+        @UniqueConstraint(name = "uk_rga", columnNames = { "rga" })
+})
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,6 +20,7 @@ public class Pet {
     private Long id;
     private String nome;
     private String especie;
+    @Column(unique = true, nullable = false)
     private String rga;
     private String cor;
 
