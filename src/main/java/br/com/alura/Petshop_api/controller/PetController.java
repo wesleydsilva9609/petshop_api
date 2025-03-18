@@ -1,10 +1,11 @@
 package br.com.alura.Petshop_api.controller;
 
+import br.com.alura.Petshop_api.dto.pet.DadosCadastroPet;
+import br.com.alura.Petshop_api.dto.pet.DadosListagemPet;
+import br.com.alura.Petshop_api.dto.pet.DadosPetAtualizado;
 import br.com.alura.Petshop_api.service.PetService;
-import br.com.alura.Petshop_api.dto.DadosCadastroPet;
-import br.com.alura.Petshop_api.dto.DadosListagemPet;
-import br.com.alura.Petshop_api.dto.DadosPetAtualizado;
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,7 +22,7 @@ public class PetController {
 
     @PostMapping
     @Transactional
-    public ResponseEntity cadastroPet(@RequestBody DadosCadastroPet dadosCadastroPet, UriComponentsBuilder uriComponentsBuilder){
+    public ResponseEntity cadastroPet(@Valid @RequestBody DadosCadastroPet dadosCadastroPet, UriComponentsBuilder uriComponentsBuilder){
         return service.cadastro(dadosCadastroPet,uriComponentsBuilder);
     }
 

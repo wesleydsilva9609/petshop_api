@@ -1,4 +1,4 @@
-package br.com.alura.Petshop_api.dto;
+package br.com.alura.Petshop_api.dto.tutor;
 
 import jakarta.validation.constraints.Email;
 

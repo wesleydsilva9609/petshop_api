@@ -1,10 +1,11 @@
 package br.com.alura.Petshop_api.controller;
 
-import br.com.alura.Petshop_api.dto.DadosCadastroTutor;
-import br.com.alura.Petshop_api.dto.DadosListagemPet;
-import br.com.alura.Petshop_api.dto.DadosTutorAtualizado;
+import br.com.alura.Petshop_api.dto.tutor.DadosCadastroTutor;
+import br.com.alura.Petshop_api.dto.tutor.DadosListagemTutor;
+import br.com.alura.Petshop_api.dto.tutor.DadosTutorAtualizado;
 import br.com.alura.Petshop_api.service.TutorService;
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,7 +22,7 @@ public class TutorController {
 
     @PostMapping
     @Transactional
-    public ResponseEntity cadastroTutor(@RequestBody DadosCadastroTutor dadosCadastroTutor, UriComponentsBuilder uriComponentsBuilder){
+    public ResponseEntity cadastroTutor(@Valid @RequestBody DadosCadastroTutor dadosCadastroTutor, UriComponentsBuilder uriComponentsBuilder){
         return service.cadastro(dadosCadastroTutor,uriComponentsBuilder);
     }
 

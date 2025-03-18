@@ -1,7 +1,7 @@
 package br.com.alura.Petshop_api.entity;
 
-import br.com.alura.Petshop_api.dto.DadosCadastroPet;
-import br.com.alura.Petshop_api.dto.DadosPetAtualizado;
+import br.com.alura.Petshop_api.dto.pet.DadosCadastroPet;
+import br.com.alura.Petshop_api.dto.pet.DadosPetAtualizado;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

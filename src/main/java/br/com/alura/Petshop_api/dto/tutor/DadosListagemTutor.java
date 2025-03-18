@@ -1,4 +1,4 @@
-package br.com.alura.Petshop_api.controller;
+package br.com.alura.Petshop_api.dto.tutor;
 
 import br.com.alura.Petshop_api.entity.Tutor;
 

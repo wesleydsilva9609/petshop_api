@@ -1,14 +1,16 @@
 package br.com.alura.Petshop_api.entity;
 
-import br.com.alura.Petshop_api.dto.DadosCadastroTutor;
-import br.com.alura.Petshop_api.dto.DadosTutorAtualizado;
+import br.com.alura.Petshop_api.dto.tutor.DadosCadastroTutor;
+import br.com.alura.Petshop_api.dto.tutor.DadosTutorAtualizado;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "tutor")
+@Table(name = "tutor", uniqueConstraints = {
+        @UniqueConstraint(name = "uk_email_cpf", columnNames = { "email", "cpf" })
+})
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,7 +20,9 @@ public class Tutor {
     private Long id;
     private String nome;
     private String telefone;
+    @Column(unique = true,nullable = false)
     private String cpf;
+    @Column(unique = true,nullable = false)
     private String email;
 
 
