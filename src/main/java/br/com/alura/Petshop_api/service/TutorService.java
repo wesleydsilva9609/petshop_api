@@ -1,5 +1,6 @@
 package br.com.alura.Petshop_api.service;
 
+import br.com.alura.Petshop_api.controller.DadosListagemTutor;
 import br.com.alura.Petshop_api.dto.DadosCadastroTutor;
 import br.com.alura.Petshop_api.dto.DadosDetalhamentoTutor;
 import br.com.alura.Petshop_api.dto.DadosTutorAtualizado;
@@ -7,11 +8,10 @@ import br.com.alura.Petshop_api.entity.Tutor;
 import br.com.alura.Petshop_api.repository.TutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.awt.print.Pageable;
 
 @Service
 public class TutorService {
@@ -40,5 +40,10 @@ public class TutorService {
         var tutor = tutorRepository.getReferenceById(id);
         tutor.atualizar(dadosTutorAtualizado);
         return ResponseEntity.ok(new DadosDetalhamentoTutor(tutor));
+    }
+
+    public ResponseEntity<Page<DadosListagemTutor>> listartutores(Pageable pageable) {
+        var page = tutorRepository.findAll(pageable).map(DadosListagemTutor::new);
+        return ResponseEntity.ok(page);
     }
 }
