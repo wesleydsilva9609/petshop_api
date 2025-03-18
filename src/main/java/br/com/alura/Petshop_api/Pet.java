@@ -27,4 +27,17 @@ public class Pet {
         this.rga = dadosCadastroPet.rga();
         this.cor = dadosCadastroPet.cor();
     }
+
+    public void atualizar(DadosPetAtualizado dadosPetAtualizado) {
+        if(dadosPetAtualizado.nome() != null){
+            this.nome = dadosPetAtualizado.nome();
+        }if(dadosPetAtualizado.especie() != null){
+            this.especie = dadosPetAtualizado.especie();
+        }
+        if(dadosPetAtualizado.rga() != null){
+            this.rga = dadosPetAtualizado.rga();
+        }if(dadosPetAtualizado.cor() != null){
+            this.cor = dadosPetAtualizado.cor();
+        }
+    }
 }
