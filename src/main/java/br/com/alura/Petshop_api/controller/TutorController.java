@@ -2,6 +2,7 @@ package br.com.alura.Petshop_api.controller;
 
 import br.com.alura.Petshop_api.dto.DadosCadastroTutor;
 import br.com.alura.Petshop_api.dto.DadosListagemPet;
+import br.com.alura.Petshop_api.dto.DadosTutorAtualizado;
 import br.com.alura.Petshop_api.service.TutorService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,12 @@ public class TutorController {
     @Transactional
     public ResponseEntity deletarPorId(@PathVariable Long id){
         return service.deletarPorId(id);
+    }
+
+    @PutMapping("/{id}")
+    @Transactional
+    public ResponseEntity atualizarTutorPorId(@PathVariable Long id, @RequestBody DadosTutorAtualizado dadosTutorAtualizado){
+        return service.atualizar(id,dadosTutorAtualizado);
     }
 
 

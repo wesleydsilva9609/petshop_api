@@ -2,6 +2,7 @@ package br.com.alura.Petshop_api.service;
 
 import br.com.alura.Petshop_api.dto.DadosCadastroTutor;
 import br.com.alura.Petshop_api.dto.DadosDetalhamentoTutor;
+import br.com.alura.Petshop_api.dto.DadosTutorAtualizado;
 import br.com.alura.Petshop_api.entity.Tutor;
 import br.com.alura.Petshop_api.repository.TutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,5 +34,11 @@ public class TutorService {
     public ResponseEntity deletarPorId(Long id) {
         tutorRepository.deleteById(id);
         return ResponseEntity.noContent().build();
+    }
+
+    public ResponseEntity atualizar(Long id, DadosTutorAtualizado dadosTutorAtualizado) {
+        var tutor = tutorRepository.getReferenceById(id);
+        tutor.atualizar(dadosTutorAtualizado);
+        return ResponseEntity.ok(new DadosDetalhamentoTutor(tutor));
     }
 }
