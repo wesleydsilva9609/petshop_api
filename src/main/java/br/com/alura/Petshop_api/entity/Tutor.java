@@ -1,12 +1,10 @@
 package br.com.alura.Petshop_api.entity;
 
-import br.com.alura.Petshop_api.controller.DadosCadastroTutor;
+import br.com.alura.Petshop_api.dto.DadosCadastroTutor;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @Entity
 @Table(name = "tutor")

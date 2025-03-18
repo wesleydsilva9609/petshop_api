@@ -1,6 +1,5 @@
-package br.com.alura.Petshop_api.service;
+package br.com.alura.Petshop_api.dto;
 
-import br.com.alura.Petshop_api.entity.Pet;
 import br.com.alura.Petshop_api.entity.Tutor;
 
 public record DadosDetalhamentoTutor(Long id, String nome, String telefone, String cpf, String email) {

@@ -1,5 +1,6 @@
 package br.com.alura.Petshop_api.controller;
 
+import br.com.alura.Petshop_api.dto.DadosCadastroTutor;
 import br.com.alura.Petshop_api.service.TutorService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;

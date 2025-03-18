@@ -1,8 +1,8 @@
 package br.com.alura.Petshop_api.service;
 
-import br.com.alura.Petshop_api.controller.DadosCadastroTutor;
+import br.com.alura.Petshop_api.dto.DadosCadastroTutor;
+import br.com.alura.Petshop_api.dto.DadosDetalhamentoTutor;
 import br.com.alura.Petshop_api.entity.Tutor;
-import br.com.alura.Petshop_api.repository.PetRepository;
 import br.com.alura.Petshop_api.repository.TutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,8 +13,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class TutorService {
     @Autowired
     private TutorRepository tutorRepository;
-    @Autowired
-    private PetRepository petRepository;
 
 
     public ResponseEntity cadastro(DadosCadastroTutor dadosCadastroTutor, UriComponentsBuilder uriComponentsBuilder) {
