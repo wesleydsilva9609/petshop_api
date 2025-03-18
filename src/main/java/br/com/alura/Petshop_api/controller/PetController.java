@@ -1,5 +1,9 @@
-package br.com.alura.Petshop_api;
+package br.com.alura.Petshop_api.controller;
 
+import br.com.alura.Petshop_api.service.PetService;
+import br.com.alura.Petshop_api.dto.DadosCadastroPet;
+import br.com.alura.Petshop_api.dto.DadosListagemPet;
+import br.com.alura.Petshop_api.dto.DadosPetAtualizado;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

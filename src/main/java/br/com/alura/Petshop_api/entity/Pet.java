@@ -1,5 +1,7 @@
-package br.com.alura.Petshop_api;
+package br.com.alura.Petshop_api.entity;
 
+import br.com.alura.Petshop_api.dto.DadosCadastroPet;
+import br.com.alura.Petshop_api.dto.DadosPetAtualizado;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,6 +20,8 @@ public class Pet {
     private String especie;
     private String rga;
     private String cor;
+    @ManyToOne
+    private Tutor tutor;
 
 
     public Pet(DadosCadastroPet dadosCadastroPet) {

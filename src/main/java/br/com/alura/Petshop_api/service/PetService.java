@@ -1,5 +1,11 @@
-package br.com.alura.Petshop_api;
+package br.com.alura.Petshop_api.service;
 
+import br.com.alura.Petshop_api.entity.Pet;
+import br.com.alura.Petshop_api.repository.PetRepository;
+import br.com.alura.Petshop_api.dto.DadosCadastroPet;
+import br.com.alura.Petshop_api.dto.DadosDetalhamentoPet;
+import br.com.alura.Petshop_api.dto.DadosListagemPet;
+import br.com.alura.Petshop_api.dto.DadosPetAtualizado;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,4 +1,6 @@
-package br.com.alura.Petshop_api;
+package br.com.alura.Petshop_api.dto;
+
+import br.com.alura.Petshop_api.entity.Pet;
 
 public record DadosListagemPet(Long id, String nome, String especie, String rga, String cor) {
 
