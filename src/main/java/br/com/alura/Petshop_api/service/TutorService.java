@@ -5,9 +5,12 @@ import br.com.alura.Petshop_api.dto.DadosDetalhamentoTutor;
 import br.com.alura.Petshop_api.entity.Tutor;
 import br.com.alura.Petshop_api.repository.TutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponentsBuilder;
+
+import java.awt.print.Pageable;
 
 @Service
 public class TutorService {
@@ -25,5 +28,10 @@ public class TutorService {
     public ResponseEntity buscarPorId(Long id) {
         var tutor = tutorRepository.getReferenceById(id);
         return ResponseEntity.ok(new DadosDetalhamentoTutor(tutor));
+    }
+
+    public ResponseEntity deletarPorId(Long id) {
+        tutorRepository.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }
