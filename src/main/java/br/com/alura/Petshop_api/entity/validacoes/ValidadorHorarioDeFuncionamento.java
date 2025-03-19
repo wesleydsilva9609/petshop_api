@@ -1,6 +1,6 @@
 package br.com.alura.Petshop_api.entity.validacoes;
 
-import br.com.alura.Petshop_api.ValidacaoException;
+import br.com.alura.Petshop_api.exceptions.ValidacaoException;
 import br.com.alura.Petshop_api.dto.DadosAgendamentoConsulta;
 import org.springframework.stereotype.Component;
 
