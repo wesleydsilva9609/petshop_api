@@ -1,4 +1,4 @@
-package br.com.alura.Petshop_api.dto;
+package br.com.alura.Petshop_api.dto.consulta;
 
 import br.com.alura.Petshop_api.entity.AgendamentoConsulta;
 import jakarta.validation.constraints.Future;
