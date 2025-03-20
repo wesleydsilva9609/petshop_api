@@ -39,7 +39,7 @@ public class TutorController {
 
     @PutMapping("/{id}")
     @Transactional
-    public ResponseEntity atualizarTutorPorId(@PathVariable Long id, @RequestBody DadosTutorAtualizado dadosTutorAtualizado){
+    public ResponseEntity atualizarTutorPorId(@PathVariable Long id,@Valid @RequestBody DadosTutorAtualizado dadosTutorAtualizado){
         return service.atualizar(id,dadosTutorAtualizado);
     }
 
