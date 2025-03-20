@@ -1,4 +1,4 @@
-package br.com.alura.Petshop_api.exceptions;
+package br.com.alura.Petshop_api.infra.exceptions;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;

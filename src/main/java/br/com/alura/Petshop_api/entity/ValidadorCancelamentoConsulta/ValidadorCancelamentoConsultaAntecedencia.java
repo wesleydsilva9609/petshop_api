@@ -1,7 +1,7 @@
 package br.com.alura.Petshop_api.entity.ValidadorCancelamentoConsulta;
 
 import br.com.alura.Petshop_api.dto.consulta.DadosCancelamentoConsulta;
-import br.com.alura.Petshop_api.exceptions.ValidacaoException;
+import br.com.alura.Petshop_api.infra.exceptions.ValidacaoException;
 import br.com.alura.Petshop_api.repository.AgendamentoConsultaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -22,7 +22,7 @@ public class AgendamentoController {
         return service.agendar(agendamentoConsulta,uriComponentsBuilder);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/cancelamento")
     @Transactional
     public ResponseEntity cancelarConsulta(@RequestBody DadosCancelamentoConsulta dadosCancelamentoConsulta){
         return service.cancelar(dadosCancelamentoConsulta);
