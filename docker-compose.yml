@@ -4,7 +4,7 @@ services:
     image: postgres:15
     container_name: postgres_petshop
     environment:
-      POSTGRES_DB: petshop
+      POSTGRES_DB: petshop_api
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
