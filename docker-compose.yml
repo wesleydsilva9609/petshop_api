@@ -13,8 +13,9 @@ services:
       - pgdata:/var/lib/postgresql/data
 
   petshop-api:
-    image: petshop-api:v1
     build: .
+    image: petshop-api:v1
+    container_name: petshop-api
     ports:
       - "8080:8080"
     depends_on:
