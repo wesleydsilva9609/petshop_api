@@ -1,7 +1,7 @@
 
 services:
   postgres:
-    image: postgres:15
+    image: postgres:17
     container_name: postgres_petshop
     environment:
       POSTGRES_DB: petshop_api
