@@ -1,11 +1,13 @@
+version: '3.8'
+
 services:
   postgres:
     image: postgres:17
     container_name: postgres_petshop
     environment:
       POSTGRES_DB: petshop_api
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 13223108
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
       - "5432:5432"
     volumes:
@@ -29,9 +31,11 @@ services:
       DB_URL: ${DB_URL}
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
 
 volumes:
   postgres_data:
+
 
 
 
