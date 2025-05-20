@@ -26,9 +26,9 @@ services:
         condition: service_healthy
     command: ["java", "-jar", "/app/app.jar"]
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/petshop_api
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: 13223108
+      DB_URL: jdbc:postgresql://postgres:5432/petshop_api
+      DB_USER: postgres
+      DB_PASSWORD: 13223108
 
 volumes:
   postgres_data:
