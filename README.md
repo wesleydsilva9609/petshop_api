@@ -5,7 +5,7 @@
 ## 🚀 Funcionalidades
 
 - **CRUD de Tutores**: Cadastro, atualização, listagem e remoção de tutores.
-- **CRUD de Pets**: Gerenciamento dos animais vinculados a um tutor.
+- **CRUD de Pets**: Gerenciamento dos pets de forma independente. O vínculo entre pet e tutor é feito apenas no momento do agendamento da consulta.
 - **Agendamento de Consultas**: 
   - Consultas podem ser agendadas somente entre **07:00 e 19:00** (horário de funcionamento da clínica).
   - Apenas **datas futuras** são permitidas para agendamento.
